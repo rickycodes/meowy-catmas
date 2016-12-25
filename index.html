@@ -5,18 +5,41 @@
     <meta charset='utf-8' />
     <meta http-equiv='x-ua-compatible' content='ie=edge' />
     <meta name='viewport' content='width=device-width, initial-scale=1.0, user-scalable=no' />
+    <meta property='og:description' content='meowy catmas (=◕ᆽ◕=)' />
+    <meta property='og:image' content='img/santa.jpg' />
     <style>
-			html, body { padding: 0; margin: 0; text-align: center; }
-			body { background: url(img/cat.gif); }
-			.catmasborder { border: 6px solid black; }
-			.red { border-color: #ED1C24; }
-			.green { border-color: #005826; }
-			img { max-width: 200px; }
+		html, body { padding: 0; margin: 40px 0 0 0; text-align: center; }
+		body { background: url(img/cat.gif); }
+		.meow canvas {
+			max-width: 100%;
+		}
+		img {
+			max-width: 200px;
+			animation-name: spin;
+			animation-duration: 4000ms;
+			animation-iteration-count: infinite;
+			animation-timing-function: linear;
+		}
+		.two {
+			animation-duration: 6000ms;
+		}
+
+		@keyframes spin {
+			0% {
+				transform: rotate(0deg) scale(1);
+			}
+			50% {
+				transform: rotate(180deg) scale(2);
+			}
+			100% {
+				transform: rotate(360deg) scale(1);
+			}
+		}
 		</style>
 	</head>
 	<body>
 		<img src='img/blackcat.gif' />
-		<img src='img/blackcat.gif' />
+		<img class='two' src='img/blackcat.gif' />
 		<audio src='jingle.mp3' autoplay='true' loop='true'></audio>
 		<div class='meow'></div>
 	</body>
